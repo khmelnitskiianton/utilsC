@@ -1,4 +1,0 @@
-[ check][15:50:14:802:941][{main.cpp}:{main}:{11}]:[Function entry]
-[  info][15:50:14:803:095][{main.cpp}:{main}:{13}]:[x: 0]
-[  info][15:50:14:803:215][{main.cpp}:{main}:{14}]:[p: abba]
-[   end][15:50:14:803:342][{./Debug/log.cpp}:{LoggingDtor}:{128}]:[Destruction Complete]
