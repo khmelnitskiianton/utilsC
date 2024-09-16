@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include "Debug/log.h"
+
+int main()
+{
+    //Logger   
+    LoggingSetup("logs.txt");
+
+    int x = 0;
+    char* p = "abba";
+    const char *string = LogErrorToStr(LogFunctionEntry());
+    
+    LogVariable("%d", x);
+    LogVariable("%s", p);   
+    return 0;
+}
