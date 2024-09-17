@@ -1,4 +1,4 @@
-# README_TERMINAL
+# How to make cool terminal!!!
 
 Setup cool terminal. Next steps I did on Linux Mint(Debian).
 
@@ -59,11 +59,11 @@ Some symbols in tmux plugin is bad
 ### Kitty
 
 1. [Theme](https://github.com/catppuccin/kitty)
-2. [How to configure](https://sw.kovidgoyal.net/kitty/conf/), [My quake config](./Terminal/kitty-quake.conf) and [My default config](./Terminal/kitty.conf)
+2. [How to configure](https://sw.kovidgoyal.net/kitty/conf/), [my quake config](kitty-quake.conf) and [my default config](kitty.conf)
 3. Quake Kitty
     + [Quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
-    + I change script to [quake-kitty.sh](quake-kitty.sh), that minimize window, but don't open previous(== `--drop-down`)
-
+    + I change this script to [quake-kitty.sh](quake-kitty.sh), that minimizes quake-window, but don't open previous(== `--drop-down`)
+**Installation:**
 ```bash
 sudo apt-get install wmctrl xdotool #to manage windows
 cd ~
