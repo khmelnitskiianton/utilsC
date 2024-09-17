@@ -60,8 +60,8 @@ Some symbols in tmux plugin is bad
 
 1. [Theme](https://github.com/catppuccin/kitty)
 2. [How to configure](https://sw.kovidgoyal.net/kitty/conf/), [my quake config](kitty-quake.conf) and [my default config](kitty.conf)
-3. Quake Kitty
-    + [Quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
+3. Make quake kitty, it hasn't this feature, but i simulate it with running script!!!
+    + [Post about quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
     + I change this script to [quake-kitty.sh](quake-kitty.sh), that minimizes quake-window, but don't open previous(== `--drop-down`)
 **Installation:**
 ```bash
