@@ -88,7 +88,7 @@ LoggingStatus LogHidden(const char* source_file_name,
     va_start(args, format_str);
 
     fprintf(log_file, 
-            "[%s][%02ld:%02ld:%02ld:%03ld:%03ld][{%s}:{%s}:{%d}]:[",
+            "[%s][%02ld:%02ld:%02ld:%03ld.%03ld][{%s}:{%s}:{%d}]:[",
             LoggingMsgArr[code_msg],
             hours,
             minutes,
