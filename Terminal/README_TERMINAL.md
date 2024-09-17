@@ -1,0 +1,81 @@
+# README_TERMINAL
+
+Setup cool terminal. Next steps I did on Linux Mint(Debian).
+
+## Color theme
+
+Font: [Fira Code](https://github.com/tonsky/FiraCode)
+
+I found beautiful theme [Catppuccin](https://github.com/catppuccin/) (Mocha), its plus that it has profiles for everything: xfce4-terminal, tmux, xournal, kitty, vscode and etc.
+
+![VSCODE CATPPUCCIN](images/image1.png)
+
+![TERMINAL CATPPUCCIN](images/image2.png)
+
+Choose and follow readme.
+
+## Shell
+
+Zsh and oh-my-zsh
+
+[Base installation](https://losst.pro/nastrojka-zsh-i-oh-my-zsh)
+
+[Pro setup](https://habr.com/ru/articles/516004/) - plugins, PowerLevel10K
+
+![After](images/image5.png)
+
+## TMUX
+
+[Tutorial](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux)
+
+[Guide](https://github.com/tmux/tmux/wiki/Getting-Started)
+
+[Cool plugin](https://github.com/catppuccin/tmux)
+
+## Terminal
+
+### XFCE4
+
+My default terminal was `xfce4-terminal` - its simple and cool to setup
+
+1. [Theme](https://github.com/catppuccin/xfce4-terminal), choose one of many(my fav is Mocha)
+2. Settings in terminal, to make transparent
+![settings](images/image3.png)
+3. The coolest option is `--drop-down` - you can choose shortcut and for it you will have one terminal that opens and closes. It's name is Quake terminal
+    + Aim to make shortcut(on Mint: Keyboard:Shortcuts:Custom Shortcuts) with command `xfce4-terminal --drop-down`
+    + Settings for drop-down ![drop-down](images/image4.png)
+
+*On Mint*: everything is Ok
+*On Ubuntu*: bug with permission for xfce4 to change shortcut after loosing focus, idk why, but its still cool
+
+*Trouble*:
+
+Some symbols in tmux plugin is bad
+
+![icons](images/image6.png)
+
+> Problem in terminal
+
+### Kitty
+
+1. [Theme](https://github.com/catppuccin/kitty)
+2. [How to configure](https://sw.kovidgoyal.net/kitty/conf/), [My quake config](./Terminal/kitty-quake.conf) and [My default config](./Terminal/kitty.conf)
+3. Quake Kitty
+    + [Quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
+    + I change script to [quake-kitty.sh](quake-kitty.sh), that minimize window, but don't open previous(== `--drop-down`)
+
+```bash
+sudo apt-get install wmctrl xdotool #to manage windows
+cd ~
+git clone https://github.com/khmelnitskiianton/utilsC.git
+cp utilsC/Terminal/kitty-quake.conf utilsC/Terminal/kitty.conf utilsC/Terminal/mocha.conf ~/.config/kitty/
+cp utilsC/Terminal/kitty-quake.sh ~
+chmod ugo+x ./kitty-quake.sh
+# make shortcut to run this script!!!
+```
+
+### Result
+
+Cool kitty-quake terminal with beautiful zsh and tmux
+
+![end](images/image7.png)

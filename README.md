@@ -3,6 +3,7 @@ some patterns/utils for C projects
 
 + Universal Makefile
 + `colors.h`
++ [Setup cool terminal](./README_TERMINAL.md)
 
 Turn on with `NDEBUG`
 
@@ -33,7 +34,7 @@ IF_DUMP_DEBUG(...)
 
 Logger writes all in log file with much information
 
-Debug macros:
+**Debug macros:**
 ```cpp
 //Main macro
 #define Log(...) // expects: enum msg, format, value 
@@ -48,9 +49,23 @@ Debug macros:
 #define LogBoolResult(expr_)
 #define LogVariable(format_, value_)
 ```
-Example: main.txt
 
-Result:
+**Example:**
+```cpp
+#include "Debug/log.h"
+int main()
+{
+    //Logger   
+    LoggingSetup("logs.txt");
+    int   x = 0;
+    char* p = "abba";
+    const char *string = LogErrorToStr(LogFunctionEntry());
+    LogVariable("%d", x);
+    LogVariable("%s", p);   
+    return 0;
+}
+```
+*Result:*
 ```cpp
 [ check][15:31:39:120:586][{main.cpp}:{int main()}:{11}]:[Function entry]
 [  info][15:31:39:120:776][{main.cpp}:{int main()}:{13}]:[x: 0]
