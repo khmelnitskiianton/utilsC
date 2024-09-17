@@ -3,7 +3,7 @@ some patterns/utils for C projects
 
 + Universal Makefile
 + `colors.h`
-+ [Setup cool terminal](./README_TERMINAL.md)
++ [Guide how to make cool terminal!!!](./Terminal/README_TERMINAL.md)
 
 Turn on with `NDEBUG`
 
