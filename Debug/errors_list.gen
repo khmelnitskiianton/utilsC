@@ -1,2 +1,3 @@
 //CODE-GENERATED DEFINED ERRORS <NAME>-<MESSAGE>
 DEF_ERROR(OK,                           "Everything is ok!")
+DEF_ERROR(NOT_OK,                       "Something is not ok!")

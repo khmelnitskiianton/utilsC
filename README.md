@@ -1,13 +1,20 @@
 # utilsC
 some patterns/utils for C projects
 
-+ Universal Makefile
-+ `colors.h`
-+ [Guide how to make cool terminal!!!](./Terminal/README_TERMINAL.md)
++ [Debug things](Debug/)
++ [Universal Makefile](Makefile)
++ [Universal VSCode profile](universal.code-profile)
++ [Guide how to make cool terminal!!!](Terminal/README_TERMINAL.md)
+
+## Terminal
+
+Guide how to setup Quake xfce4-terminal & kitty, and links for guides to setup cool zsh & tmux.
+
+## Debug things
 
 Turn on with `NDEBUG`
 
-## MY_ASSERT (Debug/myassert.h)
+### MY_ASSERT (Debug/myassert.h)
 
 Has color output in stderr, with more information and with option to make ending more harmless(not abort()) \
 Idea to have error_list.gen, where developer writes NAME_OF_ERROR and it's message, and after preprocessing we have enum and array of messages!
@@ -18,7 +25,7 @@ Idea to have error_list.gen, where developer writes NAME_OF_ERROR and it's messa
 + @param error_code name of code error, defined in EnumOfErrors
 + @param ending instruction what to do at the end of assert(abort(),exit(),return)
 
-## DUMP (Debug/dump.h)
+### DUMP (Debug/dump.h)
 
 Just many macros of colorful print to `stderr`
 
@@ -30,7 +37,7 @@ DUMP_SUCCESS(...)
 IF_DUMP_DEBUG(...)
 ```
 
-## LOGGER (Debug/log.cpp, Debug/log.h)
+### LOGGER (Debug/log.cpp, Debug/log.h)
 
 Logger writes all in log file with much information
 
@@ -65,7 +72,10 @@ int main()
     return 0;
 }
 ```
-*Result:*
+**Result:**
+
+`<type string><hh:mm:ss:mil:micr><file:func:line><msg>`
+
 ```cpp
 [ check][15:31:39:120:586][{main.cpp}:{int main()}:{11}]:[Function entry]
 [  info][15:31:39:120:776][{main.cpp}:{int main()}:{13}]:[x: 0]

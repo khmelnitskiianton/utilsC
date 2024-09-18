@@ -63,17 +63,15 @@ Some symbols in tmux plugin is bad
 3. Make quake kitty, it hasn't this feature, but i simulate it with running script!!!
     + [Post about quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
     + I change this script to [quake-kitty.sh](quake-kitty.sh), that minimizes quake-window, but don't open previous(== `--drop-down`)
-**Installation:**
+**My config installation:**
 ```bash
 sudo apt-get install wmctrl xdotool #to manage windows
 cd ~
 git clone https://github.com/khmelnitskiianton/utilsC.git
-cp utilsC/Terminal/kitty-quake.conf utilsC/Terminal/kitty.conf utilsC/Terminal/mocha.conf ~/.config/kitty/
-cp utilsC/Terminal/kitty-quake.sh ~
-chmod ugo+x ./kitty-quake.sh
-# make shortcut to run this script!!!
+cp utilsC/Terminal/*.conf utilsC/Terminal/kitty-quake.sh ~/.config/kitty/
+chmod ugo+x ~/.config/kitty/kitty-quake.sh
+#> make shortcut to run this script!!!
 ```
-
 ### Result
 
 Cool kitty-quake terminal with beautiful zsh and tmux
