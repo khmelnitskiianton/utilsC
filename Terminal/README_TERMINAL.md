@@ -8,9 +8,8 @@ Font: [Fira Code](https://github.com/tonsky/FiraCode)
 
 I found beautiful theme [Catppuccin](https://github.com/catppuccin/) (Mocha), its plus that it has profiles for everything: xfce4-terminal, tmux, xournal, kitty, vscode and etc.
 
-![VSCODE CATPPUCCIN](images/image1.png)
-
-![TERMINAL CATPPUCCIN](images/image2.png)
+<img src="images/image1.png" width=40%>
+<img src="images/image2.png" width=40%>
 
 Choose and follow readme.
 
@@ -22,7 +21,7 @@ Zsh and oh-my-zsh
 
 [Pro setup](https://habr.com/ru/articles/516004/) - plugins, PowerLevel10K
 
-![After](images/image5.png)
+<img src="images/image5.png" width=50%>
 
 ## TMUX
 
@@ -40,19 +39,21 @@ My default terminal was `xfce4-terminal` - its simple and cool to setup
 
 1. [Theme](https://github.com/catppuccin/xfce4-terminal), choose one of many(my fav is Mocha)
 2. Settings in terminal, to make transparent
-![settings](images/image3.png)
+<img src="images/image3.png" width=40%>
 3. The coolest option is `--drop-down` - you can choose shortcut and for it you will have one terminal that opens and closes. It's name is Quake terminal
     + Aim to make shortcut(on Mint: Keyboard:Shortcuts:Custom Shortcuts) with command `xfce4-terminal --drop-down`
-    + Settings for drop-down ![drop-down](images/image4.png)
+    + Settings for drop-down
 
-*On Mint*: everything is Ok
+<img src="images/image4.png" width=40%>
+
+*On Mint*: everything is Ok\
 *On Ubuntu*: bug with permission for xfce4 to change shortcut after loosing focus, idk why, but its still cool
 
 *Trouble*:
 
 Some symbols in tmux plugin is bad
 
-![icons](images/image6.png)
+<img src="images/image6.png" width=20%>
 
 > Problem in terminal
 
@@ -63,6 +64,7 @@ Some symbols in tmux plugin is bad
 3. Make quake kitty, it hasn't this feature, but i simulate it with running script!!!
     + [Post about quake kitty](https://johan.hal.se/wrote/2022/07/06/quake-kitty/) with script by changing focus(I don't like it)
     + I change this script to [quake-kitty.sh](quake-kitty.sh), that minimizes quake-window, but don't open previous(== `--drop-down`)
+
 **My config installation:**
 ```bash
 sudo apt-get install wmctrl xdotool #to manage windows
