@@ -9,6 +9,7 @@ Font: [Fira Code](https://github.com/tonsky/FiraCode)
 I found beautiful theme [Catppuccin](https://github.com/catppuccin/) (Mocha), its plus that it has profiles for everything: xfce4-terminal, tmux, xournal, kitty, vscode and etc.
 
 <img src="images/image1.png" width=40%>
+
 <img src="images/image2.png" width=40%>
 
 Choose and follow readme.
@@ -39,8 +40,10 @@ My default terminal was `xfce4-terminal` - its simple and cool to setup
 
 1. [Theme](https://github.com/catppuccin/xfce4-terminal), choose one of many(my fav is Mocha)
 2. Settings in terminal, to make transparent
+ 
 <img src="images/image3.png" width=40%>
-3. The coolest option is `--drop-down` - you can choose shortcut and for it you will have one terminal that opens and closes. It's name is Quake terminal
+
+1. The coolest option is `--drop-down` - you can choose shortcut and for it you will have one terminal that opens and closes. It's name is Quake terminal
     + Aim to make shortcut(on Mint: Keyboard:Shortcuts:Custom Shortcuts) with command `xfce4-terminal --drop-down`
     + Settings for drop-down
 
@@ -67,13 +70,16 @@ Some symbols in tmux plugin is bad
 
 **My config installation:**
 ```bash
-sudo apt-get install wmctrl xdotool #to manage windows
+sudo apt-get install kitty wmctrl xdotool #to manage windows
 cd ~
 git clone https://github.com/khmelnitskiianton/utilsC.git
+mkdir -p ~/.config/kitty/
 cp utilsC/Terminal/*.conf utilsC/Terminal/kitty-quake.sh ~/.config/kitty/
-chmod ugo+x ~/.config/kitty/kitty-quake.sh
-#> make shortcut to run this script!!!
+sudo chmod ugo+x ~/.config/kitty/kitty-quake.sh
+#> make shortcut to run this script! Write full path! 
+#> like "/home/<user>/.config/kitty/kitty-quake.sh"
 ```
+
 ### Result
 
 Cool kitty-quake terminal with beautiful zsh and tmux
