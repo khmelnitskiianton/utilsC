@@ -3,12 +3,8 @@ some patterns/utils for C projects
 
 + [Debug things](Debug/)
 + [Universal Makefile](Makefile)
++ [Simple CMake](CMakeLists.txt)
 + [Universal VSCode profile](universal.code-profile)
-+ [Guide how to make cool terminal!!!](Terminal/README_TERMINAL.md)
-
-## Terminal
-
-Guide how to setup Quake xfce4-terminal & kitty, and links for guides to setup cool zsh & tmux.
 
 ## Debug things
 
