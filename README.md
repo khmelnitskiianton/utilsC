@@ -5,6 +5,7 @@ some patterns/utils for C projects
 + [Universal Makefile](Makefile)
 + [Simple CMake](CMakeLists.txt)
 + [Universal VSCode profile](universal.code-profile)
++ [Clang format file](.clang-format)
 
 ## Debug things
 

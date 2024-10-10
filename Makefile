@@ -3,7 +3,7 @@
 #>>> To compile on Windows change SYSTEM to WIN
 SYSTEM = LINUX
 # <make> to compile
-# <bear -- make> to compile with clangd .json file
+# <make compile> to compile with bear and generate .json file for clangd!
 # <make clean> to clean .d/.o files
 # <make doxygen> to 
 
@@ -13,7 +13,7 @@ SYSTEM = LINUX
 #compilier
 #>>> PASS CC=<your compilier>
 ifeq ($(origin CC),default)
-	CC=g++
+	CC=clang++
 endif
 
 #Name of compiled executable
@@ -23,9 +23,11 @@ OBJDIR = build
 #Name of directory with headers
 INCLUDEDIR = include
 #Name of directory with .cpp
-SRCDIR = source
+SRCDIR = src
 #Name of directory where doxygen documentation will be generated
 DOXYDIR = doxDocs
+#Name of json file to store info about genetarions for clangd
+COMPILEJSON = compile_commands.json
 
 CFLAGS_WIN =	-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal						\
 				-Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs						\
@@ -54,19 +56,19 @@ CFLAGS_LINUX = 	-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggress
 #flag to tell compiler where headers are located
 override CFLAGS += -I./$(INCLUDEDIR)
 
-CMD_DEL_LINUX = @rm -rf ./$(OBJDIR)/*.o ./$(OBJDIR)/*.d
-CMD_DEL_WIN   = @del .\$(OBJDIR)\*.o .\$(OBJDIR)\*.d
+CMD_DEL_LINUX = @rm -rf ./$(OBJDIR)/*.o ./$(OBJDIR)/*.d ./$(OBJDIR)/*.json
+CMD_DEL_WIN   = @del .\$(OBJDIR)\*.o .\$(OBJDIR)\*.d .\$(OBJDIR)\*.json
 CMD_MKDIR_LINUX = @mkdir -p $(OBJDIR)
 CMD_MKDIR_WIN = @IF exist "$(OBJDIR)/" ( echo "" ) ELSE ( mkdir "$(OBJDIR)/" )
 
 ifeq ($(SYSTEM),LINUX)
 	CMD_DEL = $(CMD_DEL_LINUX)
 	CMD_MKDIR = $(CMD_MKDIR_LINUX)
-	CFLAGS += CFLAGS_LINUX
+	CFLAGS += $(CFLAGS_LINUX)
 else
 	CMD_DEL = $(CMD_DEL_WIN)
 	CMD_MKDIR = $(CMD_MKDIR_WIN)
-	CFLAGS += CFLAGS_WIN
+	CFLAGS += $(CFLAGS_WIN)
 endif
 
 #Note: ALL cpps in source dir will be compiled
@@ -98,10 +100,13 @@ $(DEPS) : $(OBJDIR)/%.d : $(SRCDIR)/%.cpp
 
 #====================================================================
 #====================================================================
+.PHONY:compile
+compile:
+	bear --output ./$(OBJDIR)/$(COMPILEJSON) -- make
 
-#.PHONY:init
-#init:
-#	$(CMD_MKDIR)
+.PHONY:init
+init:
+	$(CMD_MKDIR)
 
 #Deletes all object and .d files
 .PHONY:clean
