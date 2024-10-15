@@ -6,6 +6,9 @@ some patterns/utils for C projects
 + [Simple CMake](CMakeLists.txt)
 + [Universal VSCode profile](universal.code-profile)
 + [Clang format file](.clang-format)
++ [Script for tests](runtests.sh)
+
+[Vladimirov's lecture](https://github.com/tilir/teaching/tree/master/problem_lc)
 
 ## Debug things
 
